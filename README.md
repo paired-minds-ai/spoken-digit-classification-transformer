@@ -65,6 +65,29 @@ Quantitative results for both experiments will be documented after evaluation, i
 
 Performance may depend on the dataset split, preprocessing choices, augmentation strategy, and noise conditions. Comparisons between experiments should use consistent evaluation data and procedures.
 
+## Learning Outcomes and Methodological Limitations
+
+This project was developed as part of our undergraduate deep learning coursework. Beyond implementing a Conv1D–Transformer model for spoken digit classification, the experiments provided practical lessons about data preprocessing, evaluation methodology, and the challenges of building robust machine learning systems.
+
+### Key Learning: Data Leakage
+
+One important limitation identified during review concerns the order of data augmentation and dataset splitting. In the original workflow, spectrograms were augmented before the training, validation, and test sets were separated. As a result, augmented versions of the same original recording could potentially appear in different subsets.
+
+This creates a risk of **data leakage**, because the model may encounter highly similar examples during training and evaluation. Consequently, the reported test performance may overestimate how well the model generalizes to genuinely unseen recordings.
+
+A more rigorous approach would be to split the original recordings first, then apply augmentation exclusively to the training set, while keeping validation and test data independent of the augmentation process.
+
+### Other Lessons
+
+- **Evaluation matters as much as model architecture.** A strong-looking accuracy score is only meaningful when the evaluation protocol reliably measures generalization.
+- **Robustness requires careful testing.** Experiments with additive noise and different signal-to-noise ratios help investigate how performance changes under degraded input conditions.
+- **Reproducibility is essential.** Data splitting, random seeds, preprocessing choices, and experimental configurations should be documented to make results interpretable and repeatable.
+- **Limitations are opportunities for improvement.** Identifying weaknesses in an earlier implementation helps guide better experimental design in future projects.
+
+### Scope of the Results
+
+The notebooks are preserved as coursework experiments and are presented for learning and demonstration purposes.
+
 ## Acknowledgements
 
 This project was developed as part of undergraduate coursework in deep learning.
