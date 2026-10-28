@@ -57,10 +57,6 @@ spoken-digit-classification-transformer/
     └── model_architecture.png
 ```
 
-## Results
-
-Quantitative results for both experiments will be documented after evaluation, including classification performance and robustness under noisy conditions.
-
 ## Limitations
 
 Performance may depend on the dataset split, preprocessing choices, augmentation strategy, and noise conditions. Comparisons between experiments should use consistent evaluation data and procedures.
@@ -88,6 +84,3 @@ A more rigorous approach would be to split the original recordings first, then a
 
 The notebooks are preserved as coursework experiments and are presented for learning and demonstration purposes.
 
-## Acknowledgements
-
-This project was developed as part of undergraduate coursework in deep learning.
