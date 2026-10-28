@@ -16,6 +16,9 @@ Implementation of a Conv1D–Transformer architecture for spoken digit recogniti
 
 An extension of the baseline experiment investigating whether injecting noise into training data can improve the model's robustness when classifying noisy audio.
 
+## Model Architecture
+
+![Conv1D–Transformer architecture](assets/model_architecture.png)
 
 ## Key Techniques
 
@@ -49,7 +52,9 @@ Dataset: [Free Spoken Digit Dataset on GitHub](https://github.com/Jakobovski/fre
 spoken-digit-classification-transformer/
 ├── README.md
 ├── spoken_digit_transformer.ipynb
-└── spoken_digit_transformer_noise_augmented.ipynb
+├── spoken_digit_transformer_noise_augmented.ipynb
+└── assets/
+    └── model_architecture.png
 ```
 
 ## Results
